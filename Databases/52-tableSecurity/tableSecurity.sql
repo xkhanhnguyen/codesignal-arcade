@@ -7,3 +7,9 @@ BEGIN
     FROM emp
     ORDER BY id;
 END
+
+-- These keywords serve to create or replace the existing View. 
+-- When we run the create or the replace view statement, 
+-- MySQL checks whether it exists in the database. 
+-- If the View exists, it changes the View definition using 
+-- the query specified after the AS keyword.

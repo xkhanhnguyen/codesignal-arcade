@@ -3,7 +3,8 @@ BEGIN
     ALTER TABLE groupcourses ADD FOREIGN KEY (course_id)
     REFERENCES courses(id) ON DELETE CASCADE;
     
---     Cascade will work when we delete something on table courses. Any record on table groupcourses that has reference to table courses will be deleted automatically.
+--  Cascade will work when we delete something on table courses.
+--  Any record on table groupcourses that has reference to table courses will be deleted automatically.
 
 -- But when we try to delete on table groupcourses only the table itself is affected and not on the courses
 

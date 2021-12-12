@@ -12,8 +12,11 @@ solution(inputString) = '0'.
 """
 
 def solution(inputString):
-    if inputString.isdegit():
-        return inputString
+    for i in inputString:
+        if i.isdigit():
+            return i
+            break
 
 
 print(solution("var_1__Int"))
+print(solution("var_1__Int23"))
