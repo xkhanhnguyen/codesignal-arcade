@@ -14,7 +14,7 @@ solution(address) = "codesignal.com"
 
 """
 def solution(address):
-    domain = address.split("@")[-1]
+    domain = address.split("@")[-1] # the last one
     return domain
 
 
