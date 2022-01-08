@@ -16,7 +16,6 @@ def solution(st):
     while substring != substring[::-1]:
         index += 1
         substring = st[index:]
-    
 
     return st + st[index -1::-1]
 
