@@ -9,7 +9,6 @@ solution(text) = "steady".
 import re
 def solution(text):
     text = re.split('[^a-zA-Z0-9]+',text). # split on non-alphanumeric characters
-    print(text)
     dicts = {}
     for word in text:
         dicts[word] = len(word)
