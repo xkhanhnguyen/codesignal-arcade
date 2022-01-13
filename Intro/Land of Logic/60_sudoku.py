@@ -39,9 +39,6 @@ These examples are represented on the image below.
 
 """
 
-from typing import get_origin
-
-
 def solution(grid):
     # check row
     for row in grid:
@@ -60,8 +57,6 @@ def solution(grid):
             sub_grid = grid[row][col: col+3]
             sub_grid.extend(grid[row+1] [col: col+3])
             sub_grid.extend(grid[row+2] [col: col+3])
-            print(sub_grid)
-            
             if sorted(list(set(sub_grid))) != sorted(sub_grid):
                 return False
 
