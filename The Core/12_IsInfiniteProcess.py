@@ -18,7 +18,8 @@ def solution(a,b):
     """"
     we will always increase a by 1,
     and decrease b by 1, meaning that they will meet 
-    if they are both odd or both even"""
+    if they are both odd or both even
+    """
     if a > b:
         return True
     return a % 2 != b % 2
