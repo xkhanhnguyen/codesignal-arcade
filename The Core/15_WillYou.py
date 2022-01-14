@@ -23,12 +23,9 @@ solution(young, beautiful, loved) = true.
 
 Mary doesn't believe that not beautiful people can be loved.
 """
-from re import T
-
 
 def solution(young, beautiful, loved):
-    ans = ''
-    ans = young + beautiful + loved
     return (young and beautiful) != loved
+
 
 print(solution(False, True, False))
