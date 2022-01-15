@@ -24,9 +24,8 @@ which means that you will definitely get a 31-days pass the next time you extend
 """
 
 def solution(lastNumberOfDays):
-    ans = []
-    while lastNumberOfDays < 31:
-        lastNumberOfDays += 1
-        ans.append(lastNumberOfDays)
-    return ans
+    if lastNumberOfDays == 30 or lastNumberOfDays == 28:
+        return [31]
+    return [28, 30, 31]
+    
 print(solution(28))
