@@ -20,3 +20,5 @@ The preceding zeros in other cases don't matter, so they are omitted.
 Here, however, it does make a difference.
 
 """
+def solution(n):
+    return ((n >> 1) & 1431655765) | ((n << 1) & 2863311530)
