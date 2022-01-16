@@ -32,4 +32,4 @@ def solution(solutionNumber, makeNew):
         solutionNumber = 0
         solutionNumber = leftover // makeNew
         leftover = leftover % makeNew
-    return totalBurned
+    return burned
