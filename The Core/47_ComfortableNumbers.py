@@ -21,7 +21,15 @@ Thus, there are 2 pairs of numbers comfortable with each other
 within the segment [10; 12]: (10, 11) and (11, 12).
 """
 def solution(l, r):
-    s = l % 10 + l // 10 
-    print(s)
+    count = 0
+    for a in range(l, r):
+        for b in range(a + 1, r + 1):
+            sumA = sum(int(i) for i in str(a))
+            sumB = sum(int(i) for i in str(b))
+            
+            if b <= a + sumA and a >= b - sumB:
+                count += 1
+    return count
 
 print(solution(10, 12))
+
