@@ -37,7 +37,7 @@ def solution(a0):
         for i in str(sequence[-1]):
             value += int(i) ** 2
         sequence.append(value)
-    print(sequence)
+    
     return len(sequence)
 
 print(solution(16))
