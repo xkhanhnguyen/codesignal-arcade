@@ -40,22 +40,49 @@ The in-store price of the first item is 60, and the second item is 150.
 The overpayment equals 15 - 12 = 3, which is too much for the customer to be willing to pay.
 
 """
-import re
+def truncate_float(n, places):
+    return int(n * (10 ** places)) / 10 ** places
+
+def get_percentage(note):
+    percentage = 0
+    notes_split = note.split("% ")
+    float_val = float(notes_split[0])
+    if notes_split[1][0] =="l":
+        return percentage - float_val
+    else:
+        return percentage + float_val
+
+def get_overpayment(percentage, price):
+    store_val = ( (100.0+(percentage)) / 100)
+    original_price = round(float(price) / store_val)
+    return abs(float(price) - (original_price))
+    
 def solution(prices, notes, x):
-    for note in notes:
-        percentage = re.findall('\d*%', note)
-    print(percentage)
+    value = 0
     for i in range(len(prices)):
-        if 'lower' in notes[i]:
-            pay = prices[i] + prices[i] * percentage[i]
-        else:
-            pay = prices[i] - prices[i] * percentage[i]
-    return pay
+        if notes[i][0].isnumeric():
+            notes_split = notes[i].split("% ")
+            percentage = get_percentage(notes[i])
+            over_payment = get_overpayment(percentage,prices[i])
+            if percentage == 0.001:
+                return False
+            if notes_split[1][0] =="l" and percentage >= -100:
+                value -= over_payment
+                print(value)
+            else:
+                value += over_payment
+                print(value)
 
-prices = [48, 165]
+    if round(value,2) <= x:
+        return True
+    return False
+            
 
-notes = ["20.00% lower than in-store", 
-         "10.00% higher than in-store"]
-x = 2
+
+prices= [110, 95, 70]
+notes=["10.0% higher than in-store", 
+ "5.0% lower than in-store", 
+ "Same as in-store"]
+x= 5
 
 print(solution(prices, notes, x))
