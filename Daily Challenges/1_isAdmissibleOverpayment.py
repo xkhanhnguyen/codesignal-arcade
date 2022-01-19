@@ -1,4 +1,6 @@
 """
+# CodeSignal
+
 After recently joining Instacart's beta testing developer group, 
 you decide to experiment with their new API. You know that the API returns item-specific 
 display-ready strings like 10.0% higher than in-store or 5.0% lower than in-store 
@@ -38,6 +40,7 @@ solution(prices, notes, x) = false.
 
 The in-store price of the first item is 60, and the second item is 150. 
 The overpayment equals 15 - 12 = 3, which is too much for the customer to be willing to pay.
+
 
 """
 def truncate_float(n, places):
