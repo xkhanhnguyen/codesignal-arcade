@@ -11,3 +11,10 @@ For inputString = "2w2ww", the output should be
 solution(inputString) = false.
 
 """
+
+def solution(inputString):
+    return inputString[:len(inputString)//2] == inputString[len(inputString)//2:]
+
+
+print(solution("2w2ww"))
+print(solution("tandemtandem"))
