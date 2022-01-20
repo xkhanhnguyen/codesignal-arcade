@@ -8,4 +8,5 @@ solution(inputString) = "(abacaba)".
 
 """
 def solution(inputString):
-    return ("(" + inputString + ")")
+    return "(" + inputString + ")"
+
