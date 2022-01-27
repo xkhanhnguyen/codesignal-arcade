@@ -16,12 +16,7 @@ solution(inputString) = false.
 
 """
 def solution(inputString):
-    if len(inputString) != 17:
-        return False
     splitString = inputString.split('-')
-    
-    if len(splitString)!=6:
-        return False
     for i in range(0,len(splitString)):
         if len(splitString[i])!=2:
             return False
